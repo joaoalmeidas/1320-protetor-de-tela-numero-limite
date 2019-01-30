@@ -17,10 +17,11 @@ public class ProtetorDeTelaFrame extends JFrame{
 	public ProtetorDeTelaFrame() {
 		
 		panelLinhas = new JPanel(new FlowLayout());
-		prot = new ProtetorDeTela();
 		
 		fieldLinhas = new JTextField(5);
 		fieldLinhas.setText("4");
+		
+		prot = new ProtetorDeTela(Integer.parseInt(fieldLinhas.getText()));
 		
 		fieldLinhas.addKeyListener(new LimiteListener());
 		
@@ -36,7 +37,7 @@ public class ProtetorDeTelaFrame extends JFrame{
 		@Override
 		public void keyReleased(KeyEvent arg0) {
 			
-			System.out.println(fieldLinhas.getText());
+			prot.setLimite(Integer.parseInt(fieldLinhas.getText()));
 			
 		}
 

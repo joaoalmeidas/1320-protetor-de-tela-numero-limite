@@ -11,7 +11,7 @@ public class ProtetorDeTela extends JPanel implements ActionListener{
 	
 	private final SecureRandom aleatorio = new SecureRandom();
 	private Timer tempo ;
-	private final int limite;
+	private int limite;
 	
 	public ProtetorDeTela(int limite){
 		
@@ -41,5 +41,14 @@ public class ProtetorDeTela extends JPanel implements ActionListener{
 		repaint();
 		
 	}
+
+	public int getLimite() {
+		return limite;
+	}
+
+	public void setLimite(int limite) {
+		this.limite = limite;
+	}
+	
 	
 }
