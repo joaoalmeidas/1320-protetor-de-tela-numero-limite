@@ -4,7 +4,7 @@ public class ProtetorDeTelaApp {
 
 	public static void main(String[] args) {
 		
-		JFrame frame = new JFrame("Protetor de tela.");	
+		ProtetorDeTelaFrame frame = new ProtetorDeTelaFrame();	
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		ProtetorDeTela prot = new ProtetorDeTela();
