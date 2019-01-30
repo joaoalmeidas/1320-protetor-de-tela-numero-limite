@@ -11,12 +11,13 @@ public class ProtetorDeTela extends JPanel implements ActionListener{
 	
 	private final SecureRandom aleatorio = new SecureRandom();
 	private Timer tempo ;
+	private final int limite;
 	
-	public ProtetorDeTela(){
+	public ProtetorDeTela(int limite){
 		
 		tempo = new Timer(1000, this);
 		tempo.start();
-		
+		this.limite = limite;
 	}
 	
 	@Override
@@ -24,7 +25,7 @@ public class ProtetorDeTela extends JPanel implements ActionListener{
 		
 		super.paintComponent(g);
 		
-		for(int i = 0; i < 100; i++) {
+		for(int i = 0; i < limite; i++) {
 			
 			g.setColor(new Color(aleatorio.nextInt(256), aleatorio.nextInt(256), aleatorio.nextInt(256)));
 			g.drawLine(aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight()), aleatorio.nextInt(getWidth()), aleatorio.nextInt(getHeight()));
